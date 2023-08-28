@@ -20,3 +20,4 @@ Boolean(1/0) => true/false
 Boolean("") => false //empty string
 Boolean("harshit") => true
 
+* We can use variables in string using Template Literals. For eg: console.log(`Hello, ${name}`)
