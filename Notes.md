@@ -21,3 +21,82 @@ Boolean("") => false //empty string
 Boolean("harshit") => true
 
 * We can use variables in string using Template Literals. For eg: console.log(`Hello, ${name}`)
+
+
+
+
+# Promises: 
+
+The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+** Without Promises -
+function successCallback(result) {
+  console.log(`Audio file ready at URL: ${result}`);
+}
+
+function failureCallback(error) {
+  console.error(`Error generating audio file: ${error}`);
+}
+
+createAudioFileAsync(audioSettings, successCallback, failureCallback);
+
+** Using Promises -
+createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
+
+
+# async and await:
+
+'async' keyword is used to make a function asynchronous. This means:
+
+async function functionCall(){
+    console.log("first print")
+    const result = someOtherCall() //assuming it will take some time to return result
+    console.log(result)
+    console.log("final print")
+}
+functionCall
+
+Output:
+first print
+final print
+{result}
+
+'await' make the flow synchronous to the line it is called. It makes further statement 'wait' unless it has completed its task.
+
+async function functionCall(){
+    console.log("first print")
+    const result = await someOtherCall() //assuming it will take some time to return result
+    console.log(result)
+    console.log("mid print")
+    const result2 = someOtherCall2()
+    console.log(result2)
+    console.log("final print")
+}
+functionCall();
+
+Output:
+first print
+{result}
+mid print
+final print
+result2
+
+OR
+
+async function functionCall(){
+    console.log("first print")
+    const result = await someOtherCall() //assuming it will take some time to return result
+    console.log("mid print")
+    console.log(result)                     // once result is stored, first print 'mid print' then print result
+    const result2 = someOtherCall2()
+    console.log(result2)
+    console.log("final print")
+}
+functionCall();
+
+Output:
+first print
+mid print
+{result}
+final print
+result2
