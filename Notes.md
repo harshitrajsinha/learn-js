@@ -54,7 +54,7 @@ async function functionCall(){
     console.log(result)
     console.log("final print")
 }
-functionCall
+functionCall();
 
 Output:
 first print
