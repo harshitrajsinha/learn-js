@@ -23,7 +23,11 @@ Boolean("harshit") => true
 
 * We can use variables in string using Template Literals. For eg: console.log(`Hello, ${name}`)
 
-
+# Math
+* Formula for random number between range
+const min = 10
+const max = 20
+const randomNum = Math.floor(Math.random()*(max-min+1))+min
 
 
 # Promises: 
