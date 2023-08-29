@@ -1,4 +1,4 @@
-To Master: Objects, strings, browser events
+To Master: Strings and its methods, Arrays and its methods, Objects, browser events
 
 DAY 1: undefined, use-strict, data-types: symbol, null [typeof null], object, type conversion
 
@@ -29,6 +29,13 @@ Boolean("harshit") => true
 const min = 10
 const max = 20
 const randomNum = Math.floor(Math.random()*(max-min+1))+min
+
+# Arrays:
+* Slice vs Splice (slice does the change by creating a copy of array, splice does change by manipulating the original array)
+
+
+
+
 
 
 # Promises: 
