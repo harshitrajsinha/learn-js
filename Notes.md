@@ -1,4 +1,5 @@
-IMPORTANT: Objects, strings, browser events
+To Master: Objects, strings, browser events
+
 DAY 1: undefined, use-strict, data-types: symbol, null [typeof null], object, type conversion
 
 TOPIC: Variables and Data-types -
