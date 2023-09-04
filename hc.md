@@ -34,3 +34,28 @@ function some_name(name){
 some_name()                                     // output: Your name is undefined
 
 Therefore, it is must to do check before processing the parameters
+
+# Dynamic parameter
+
+function dynamic_param(...any_no_param)         // ... => rest operator
+
+IMPORTANT: 
+
+function rest_operator(...num){
+    return num                                  // Output: [1,2,3,4,5] array of parameters
+}
+
+rest_operator(1,2,3,4,5)
+
+function rest_operator(val1, val2, ...num){
+    return num                                  // Output: [3,4,5] array of parameters after storing val1 and val2
+}
+
+rest_operator(1,2,3,4,5)
+
+IMPORTANT:
+# Scope: 
+Difference in node environment scope vs window scope (inspect -> console)
+
+console.log(this) ->IN NODE -> {}                       //In node, global scope is empty object           
+console.log(this) -> inspect->console -> WINDOW         //In browsers, global scope is window object 

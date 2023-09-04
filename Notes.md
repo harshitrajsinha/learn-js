@@ -1,4 +1,4 @@
-To Master: Strings and its methods, Arrays and its methods, Objects, browser events
+To Master: Strings and its methods, Arrays and its methods, Objects, browser events, scope - Node vs Window/browser, this
 
 DAY 1: undefined, use-strict, data-types: symbol, null [typeof null], object, type conversion
 
