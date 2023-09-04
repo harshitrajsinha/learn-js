@@ -27,4 +27,69 @@
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
+
+	//----------------------------------------------Extension Settings------------------------------------
+	//TODO Highlight  
+
+	// {
+	// 	"workbench.colorTheme": "Atom One Dark",
+	// 	"todohighlight.keywords": [
+	
+	// 		{
+	// 			"text": "To Master:",
+	// 			"color": "black",
+	// 			"backgroundColor": "white",
+	// 			"isWholeLine": false
+	// 		},
+	
+	// 		{
+	// 			"text": "DATE",
+	// 			"color": "#08a325",
+	// 			"backgroundColor": "rgb(0,0,0,0)",
+	// 			"isWholeLine": true
+	// 		},
+	
+	// 		{
+	// 			"text": "Refer -",
+	// 			"color": "#1286c4",
+	// 			"backgroundColor": "rgb(0,0,0,0)",
+	// 			"isWholeLine": true
+	// 		},
+	
+	// 		{
+	// 			"text": "IMPORTANT:",
+	// 			"color": "yellow",
+	// 			"backgroundColor": "rgba(0,0,0,0)", 
+	
+	// 		},
+	
+	// 		{
+	// 			"text": "$$",
+	// 			"color": "#25a819",
+	// 			"backgroundColor": "rgba(0,0,0,0)",
+	// 			"isWholeLine": true
+	// 		},
+	
+	// 		{
+	// 			"text": "DAY",
+	// 			"color": "#f0b93a",
+	// 			"backgroundColor": "rgba(0,0,0,0)",
+	// 			"isWholeLine": true
+	// 		},
+	
+	// 		{
+	// 			"text": "NOTE:",
+	// 			"color": "black",
+	// 			"backgroundColor": "#9e34eb"
+	// 		},
+	
+	// 		{
+	// 			"text": "TOPIC:",
+	// 			"color": "black",
+	// 			"backgroundColor": "#F96167"
+	// 		}
+	// 	]
+	// }
+
+
 }
