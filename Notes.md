@@ -33,7 +33,8 @@ const randomNum = Math.floor(Math.random()*(max-min+1))+min
 # Arrays:
 * Slice vs Splice (slice does the change by creating a copy of array, splice does change by manipulating the original array)
 
-
+# Objects:
+* How different keys are accessed in objects: name, "name", [name]
 
 
 

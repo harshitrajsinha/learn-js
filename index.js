@@ -1,7 +1,12 @@
-console.log("harshit");
+// Creating Object
 
-let num = "33abc";
-console.log(typeof num);
-num = Number(num);
-console.log(typeof num);
-console.log(num);
+// Defining symbol
+const sym = Symbol("symKey");
+
+const an_object = {
+    name: "Harshit",
+    "myname": 23,
+    [sym]:  "a symbol"
+}
+
+console.log(typeof an_object['myname']);
