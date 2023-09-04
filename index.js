@@ -1,16 +1,12 @@
-//
-function functionCall(someValue){
-    if(!someValue){
-        console.log("error");
-        return;
-    }
-    someValue['myname'] = "raj sinha";
+function outer() {
+  const name = "Bob";
 
+  function inner() {
+    console.log(`Hello, ${name}!`);
+  }
+
+  return inner;
 }
 
-someValue = {
-    "myname": "harshit"
-};
-console.log(someValue["myname"]);
-functionCall();
-console.log(someValue["myname"]);
+const greeting = outer();
+greeting(); // logs "Hello, Bob!"

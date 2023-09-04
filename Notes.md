@@ -40,6 +40,23 @@ const randomNum = Math.floor(Math.random()*(max-min+1))+min
 * We can call a function before its declaration and definition. This will run without any error due to hoisting [DONT USE THIS. JUST FOR REFERENCE].
 TODO: Refer - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_hoisting
 
+# Closure:
+
+function outer() {
+  const name = "Bob";
+
+  function inner() {
+    console.log(`Hello, ${name}!`);
+  }
+
+  return inner;
+}
+
+const greeting = outer();
+greeting(); // logs "Hello, Bob!"
+
+In this example, outer defines a variable name and a function inner . inner is defined within outer, so it has access to name in outer's lexical environment. When outer is called, a variable named 'name' will be defined, but the function 'inner' will be skipped since it is a function and it has not been called. Finally 'return inner' statement will run and inner will return. 'greeting' variable will store 'inner' and then inner() will be called (greeting = inner). This call will directly execute inner() and not start from declaring 'name' variable again. A closure is created that retains access to 'name' during the end of outer() execution. This means that even though outer has finished running and 'name' is technically out of scope, inner can still access it and log a greeting with it.
+
 
 # Promises: 
 
