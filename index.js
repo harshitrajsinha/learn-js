@@ -1,12 +1,16 @@
-// Creating Object
+//
+function functionCall(someValue){
+    if(!someValue){
+        console.log("error");
+        return;
+    }
+    someValue['myname'] = "raj sinha";
 
-// Defining symbol
-const sym = Symbol("symKey");
-
-const an_object = {
-    name: "Harshit",
-    "myname": 23,
-    [sym]:  "a symbol"
 }
 
-console.log(typeof an_object['myname']);
+someValue = {
+    "myname": "harshit"
+};
+console.log(someValue["myname"]);
+functionCall();
+console.log(someValue["myname"]);
