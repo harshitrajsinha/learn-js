@@ -1,7 +1,7 @@
 # DAY x: Objects
 * Singleton objects / declaring object using constructor
 
-# DAY y:
+DATE: 2023.09.04
 
 TOPIC:  Object de-structre
 

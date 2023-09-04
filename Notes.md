@@ -38,7 +38,7 @@ const randomNum = Math.floor(Math.random()*(max-min+1))+min
 
 # Function:
 * We can call a function before its declaration and definition. This will run without any error due to hoisting [DONT USE THIS. JUST FOR REFERENCE].
-TODO: Refer - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_hoisting
+Refer - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_hoisting
 
 # Closure:
 A closure is a function that has access to variables from its outer (enclosing) lexical scope, even after that outer function has returned.
