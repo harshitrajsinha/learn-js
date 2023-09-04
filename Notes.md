@@ -37,7 +37,7 @@ const randomNum = Math.floor(Math.random()*(max-min+1))+min
 * How different keys are accessed in objects: name, "name", [name]
 
 # Function:
-* We can call a function before its declaration and definition. This will run without any error due to hoisting.
+* We can call a function before its declaration and definition. This will run without any error due to hoisting [DONT USE THIS. JUST FOR REFERENCE].
 TODO: Refer - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_hoisting
 
 
