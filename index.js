@@ -1,12 +1,11 @@
-function outer() {
-  const name = "Bob";
+const createCounter = function(n) {
 
-  function inner() {
-    console.log(`Hello, ${name}!`);
+  function counter(){
+      return n++;
   }
 
-  return inner;
-}
+};
 
-const greeting = outer();
-greeting(); // logs "Hello, Bob!"
+const counter = createCounter(10);
+counter(10);
+counter(11);
