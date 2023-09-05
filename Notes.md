@@ -148,3 +148,10 @@ false
 null
 undefined
 NaN
+
+These are truthy values: 
+'0' (string containing a single zero)
+'false' (string containing the word "false")
+[] (empty array)
+{} (empty object)
+function() {} (empty function)
