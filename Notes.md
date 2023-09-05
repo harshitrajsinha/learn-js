@@ -134,3 +134,17 @@ mid print
 {result}
 final print
 result2
+
+
+
+
+
+What are the falsy values in JS:
+false
+0
+-0
+0n (BigInt zero)
+'' (empty string)
+null
+undefined
+NaN
