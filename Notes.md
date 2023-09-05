@@ -155,3 +155,10 @@ These are truthy values:
 [] (empty array)
 {} (empty object)
 function() {} (empty function)
+
+How to check if value will return truthy value or falsy:
+if('0'){
+  console.log("true")
+}else{
+  console.log("false")
+}
