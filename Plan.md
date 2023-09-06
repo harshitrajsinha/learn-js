@@ -40,3 +40,8 @@ DAY 13-14: Performance and Deployment
 * Learn about caching, load balancing, and other performance-enhancing techniques.
 * Explore deployment options for Node.js applications, such as using platforms like Heroku or deploying to a cloud server (e.g., AWS or DigitalOcean).
 * Deploy your completed project and make it accessible online.
+
+TO LEARN:
+* V8 engine and its working
+* Global Execution
+* Garbage collection - Mark & Sweep
