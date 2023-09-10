@@ -1,5 +1,17 @@
 To Master: Strings and its methods, Arrays and its methods, Objects, browser events, scope - Node vs Window/browser, this
 
+--------------------------------------------------
+
+* A lot of browsers does not understand new and fancy syntax of JS like classes,  arrow functions. Solution => bring a tool in-between (modern JS) and browser that can convert modern JS into regular JS or browser-based JS, JS that browser understands
+
+* These tools are - Babel, Webpack (used by Bun)
+
+* Modern JS code -> bundled -> transpiled -> compiled. This can be done using languages such as C, Go, Rust, Zig (used by Bun)
+
+* Bun use JavaScript Core (used by Safari web browser) as a runtime engine instead of popular V8 or spider monkey 
+
+--------------------------------------------------
+
 DAY 1: undefined, use-strict, data-types: symbol, null [typeof null], object, type conversion
 
 TOPIC: Variables and Data-types -
