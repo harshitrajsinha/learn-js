@@ -59,6 +59,3 @@ Difference in node environment scope vs window scope (inspect -> console)
 
 console.log(this) ->IN NODE -> {}                       //In node, global scope is empty object           
 console.log(this) -> inspect->console -> WINDOW         //In browsers, global scope is window object 
-
-# Switch statement: 
-Once a condition is matched, all the remaining lines of code gets executed (if break is not present) except default. For example- if 'case = 3' is matched then the program will run the statements present inside 'case=4', 'case=5', 'case=6' (if 'break' is not present in 'case=3') even if case=4/5/6 does not match. But once it will encounter 'default' it will break
