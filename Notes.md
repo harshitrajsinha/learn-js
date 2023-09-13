@@ -175,8 +175,27 @@ if('0'){
   console.log("false")
 }
 
+// checking if string is empty or not
 const name = "something"
 if(name){
   // will be executed
-  }else{
-  }
+}else{}
+
+// checking if array is empty or not
+
+//just for example to show empty array returns truthy value
+const array1 = []
+if(array1){
+//will be executed
+}
+//this is how array check should be performed
+const array2 = []
+if(array2.length === 0){
+// will be executed
+}
+
+// this is how object check should be performd
+const obj2 = {}
+if(Object.keys(obj2).length === 0){          //Object.keys(obj2) returns array of keys ['key1', 'key2'], in this case it will be empty
+//will be executed
+}
