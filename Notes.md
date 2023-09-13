@@ -151,7 +151,7 @@ result2
 
 
 
-What are the falsy values in JS:
+# Falsy values in JS:
 false
 0
 -0
@@ -161,7 +161,7 @@ null
 undefined
 NaN
 
-These are truthy values: 
+Truthy values in JS: 
 '0' (string containing a single zero)
 'false' (string containing the word "false")
 [] (empty array)
@@ -170,7 +170,13 @@ function() {} (empty function)
 
 How to check if value will return truthy value or falsy:
 if('0'){
-  console.log("true")
+  console.log("true") //will execute
 }else{
   console.log("false")
 }
+
+const name = "something"
+if(name){
+  // will be executed
+  }else{
+  }
