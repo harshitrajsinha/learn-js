@@ -1,4 +1,4 @@
-// map method in javascript is used to perform operations on each element of the array and then return the result in the form of array where each element of the returned array is the updated value based on the operations performed.
+// map method in javascript is used to create a new array where each element of the new array will be tranformed values of the original array by performing some operations.
 // The original array remains intact.
 // map method in javascript accepts a callback function and applies the operation on each element of the array.
 // the callback function could have three parameters [value (each element of array), index (index of the elements of array), and the array itself]
