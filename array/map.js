@@ -5,6 +5,7 @@
 // map method in javascript acts like forEach but it returns data which is an array. forEach does not return any value. 
 // Since map returns an array we can do chaining with the help of map
 // It accepts a callback function, hence we can pass a complete function as well, this function will be called as callback function. That function will internally take the iterated array
+// map method is used for array transformation such as doubling the values of array, cubing the values of array etc.
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
