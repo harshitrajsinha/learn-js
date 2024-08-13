@@ -79,6 +79,8 @@ console.log(myNum); // 3
 /*Comma operator is typically used in very specific scenarios where its benefits outweigh the potential downsides of reduced code clarity like two-pointers in for loop*/
 
 /************/
+
+// Trick question --
 const num = (2, console.log("here"));
 console.log(num);
 //here
@@ -86,6 +88,34 @@ console.log(num);
 
 /*************/
 
-
-
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// includes():
+
+/* 
+The includes() method in string determines whether a given set of character is present in the string to be searched or not. This is case sensitive.
+The includes() method of Array determines whether an array includes a certain element or not and it searches for complete element, even if it is array of string.
+*/
+
+// It accepts two params - char/elem to search for, position to start searching
+[1, 2, 3].includes(3, 3); // false
+["1", "2", "3"].includes(3); // false
+"something 3 something".includes(3) // true
+"something 3 something".includes("3") // true
+
+// includes() of string converts the passed value to a string before searching.
+str.includes(undefined) // searches for "undefined"
+
+
+/***********/
+
+// Trick question --
+const sentence = 'Quick brown fox jumps over the lazy dog.';
+console.log(sentence.includes('quick')); // false
+const sentence_two = 'The quick brown fox jumps over the lazy dog.';
+console.log(sentence_two.includes('the')); // true  [the is present as the last third word]
+console.log(sentence_two.includes(undefined)); // searches for "undefined"
+
+/***********/
+
+
