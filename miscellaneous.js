@@ -53,7 +53,7 @@ setTimeout(print_my_name, 2000);
 
 // Comma operator
 
-/* Comma operator is used to evaluate each of the operands/expression, seperated by comma, from left to right and then return the value of last operand.*/
+/* Comma operator is used to evaluate each of the operands, if it is an expression, seperated by comma, from left to right and then return the value of last operand.*/
 const myNum = (2,3);
 console.log(myNum); // 3
 
@@ -71,11 +71,21 @@ console.log(myNum); // 3
     }
 // 3) for loop with multiple expression
     for (let i = 0, j = 10; i < j; i++, j--) {    
-      //comma operator is only in the third set of operation (i++, j--); the first set of operand is not comma operator. Here j-- is not returned, rather here the only use of comma operator is to evaluate the expression sequentially.
+      //comma operator is only in the third set of operation (i++, j--); the first set of operand is not comma operator. in the context of the for loop, the value returned by the comma operator is not actually used or stored anywhere. The primary purpose of using the comma operator here is to execute multiple expressions (in this case, both i++ and j--) within the loop's update phase.
         console.log(`i: ${i}, j: ${j}`);
     }
 // 4) function(1,2){...}  here comma operator is not used, rather it is typical comma used to seperate two values
 
 /*Comma operator is typically used in very specific scenarios where its benefits outweigh the potential downsides of reduced code clarity like two-pointers in for loop*/
+
+/************/
+const num = (2, console.log("here"));
+console.log(num);
+//here
+//undefined
+
+/*************/
+
+
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
