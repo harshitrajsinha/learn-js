@@ -15,42 +15,6 @@ setTimeout(print_my_name, 2000);
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// Make an object immutable : Use of recursion
-
-/* Const keyword is used to make any primitive data type immutable but it does not work completely on non-primitive data types like objects. When an object is made contstant, then we cannot reassign a new object to the variable in which it is stored but modification of its properties are possible - */
-    const newObj = {id: 1, name: 'random'};
-    newObj = {new_id: 23, new_name: 'random'}; // not allowed, JS will throw error -  Assignment to constant variable.
-    newObj.id = 2; // allowed
-/* In order to make an object immutable, is to use freeze() provided by the Object class. But it does not work with nested objects */
-    const newObj = {id: 1, name: 'random'};
-    Object.freeze(newObj);
-    newObj.id = 2;  // No error will be thrown but on printing it old object will get printed.
-    const user = {id: 1, name: {firstname: "harshit", lastname: "raj"}, address: {city: "dhanbad", state: "jharkhand"}};
-    Object.freeze(user);
-    user.id = 2; // not allowed
-    user.name.lastname = 'sinha'; // allowed
-/* The way to overcome this is to make a custom function that will deep freeze the object.*/
-
-    function deepFreeze(user){
-        Object.keys(user).forEach(key => {
-            const keys_value = user[key];
-            if(keys_value && typeof keys_value === 'object'){
-                deepFreeze(keys_value);
-            }
-        });
-        return Object.freeze(user);
-    }
-    
-    const user = {id: 8, name: {firstname: "harshit", lastname: "raj"}, address: {city: "dhanbad", state: "jharkhand"}};
-    deepFreeze(user);
-    user.name.lastname = 'sinha';
-    user.address.city = 'ranchi';
-    console.log(user);
-
-/* Logic: in order to freeze any object, we pass the variable to the freeze() in which the object is stored. Function will take the primary object and then loop through each of its keys and store the value in a variable and check whether it is of type 'object' or not. If it is of type object it will recurse that nested object to check if there is 3rd level of object. If not found, it will return the nested object by freezing it => the nested object will be freezed and returned to the recursive function and then the loop will iterate to the next key. In this way all the key's value will be freezed if it is an object or even if it contains any nested object. */
-
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 // Comma operator
 
 /* Comma operator is used to evaluate each of the operands, if it is an expression, seperated by comma, from left to right and then return the value of last operand.*/
@@ -118,4 +82,110 @@ console.log(sentence_two.includes(undefined)); // searches for "undefined"
 
 /***********/
 
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// Object - Shallow copy vs Deep copy:
+
+/* 
+In shallow copy, a copy of the object, duplicate top-level properties and reference nested objects, is created in heap memory and the reference of this newly created object in the memory is given to the new variable. Hence, any change by the new variable to the object affects the newly created object and not the original one, except the nested objects. This is 
+In deep copy,  a copy of the object, duplicate top-level properties and nested objects, is created in heap memory and the reference of this newly created object in the memory is given to the new variable. Hence, any change by the new variable to the object affects the newly created object and not the original one, including the nested objects.
+
+NOTE - 
+1) Object can be duplicated using - spread operator [shallow copy], assign() [shallow copy], JSON.parse(JSON.stringify()) [deep copy], library like Lodash's _.cloneDeep [deep copy]
+2) When an object is assign to another variable using '=' operator then the reference of the original object is shared to the newly created variable. Hence, the original object can be changed using either of the variables. The modification affects the top-level properties as well as nested objects.
+3) Nested objects gets modified whether the duplicate object is created using shallow copy or deep copy because for nested objects, its reference is stored
+*/
+
+// Shallow copy
+const testObj = {
+    id: 1,
+    name: {
+        firstName: "Harshit",
+        lastName: "Raj"
+    }
+}
+const newTestObj = {...testObj};
+newTestObj.id = 2;
+newTestObj.name.lastName = "Sinha";
+console.table([testObj, newTestObj]);
+┌─────────┬────┬─────────────────────────────────────────────┐
+│ (index) │ id │ name                                        │
+├─────────┼────┼─────────────────────────────────────────────┤
+│ 0       │ 1  │ { firstName: 'Harshit', lastName: 'Sinha' } │
+│ 1       │ 2  │ { firstName: 'Harshit', lastName: 'Sinha' } │
+└─────────┴────┴─────────────────────────────────────────────┘
+
+// Deep copy -
+const testObj = {
+    id: 1,
+    name: {
+        firstName: "Harshit",
+        lastName: "Raj"
+    }
+}
+const newTestObj = JSON.parse(JSON.stringify(testObj));
+newTestObj.id = 2;
+newTestObj.name.lastName = "Sinha";
+console.table([testObj, newTestObj]);
+┌─────────┬────┬─────────────────────────────────────────────┐
+│ (index) │ id │ name                                        │
+├─────────┼────┼─────────────────────────────────────────────┤
+│ 0       │ 1  │ { firstName: 'Harshit', lastName: 'Raj' }   │
+│ 1       │ 2  │ { firstName: 'Harshit', lastName: 'Sinha' } │
+└─────────┴────┴─────────────────────────────────────────────┘
+
+// '=' operator
+const testObj = {
+    id: 1,
+    name: {
+        firstName: "Harshit",
+        lastName: "Raj"
+    }
+}
+const newTestObj = testObj;
+newTestObj.id = 2;
+newTestObj.name.lastName = "Sinha";
+console.table([testObj, newTestObj]);
+┌─────────┬────┬─────────────────────────────────────────────┐
+│ (index) │ id │ name                                        │
+├─────────┼────┼─────────────────────────────────────────────┤
+│ 0       │ 2  │ { firstName: 'Harshit', lastName: 'Sinha' } │
+│ 1       │ 2  │ { firstName: 'Harshit', lastName: 'Sinha' } │
+└─────────┴────┴─────────────────────────────────────────────┘
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Make an object immutable : Use of recursion
+
+/* Const keyword is used to make any primitive data type immutable but it does not work completely on non-primitive data types like objects. When an object is made contstant, then we cannot reassign a new object to the variable in which it is stored but modification of its properties are possible - */
+    const newObj = {id: 1, name: 'random'};
+    newObj = {new_id: 23, new_name: 'random'}; // not allowed, JS will throw error -  Assignment to constant variable.
+    newObj.id = 2; // allowed
+/* In order to make an object immutable, use freeze() provided by the Object class. But it does not work with nested objects */
+    const newObj = {id: 1, name: 'random'};
+    Object.freeze(newObj);
+    newObj.id = 2;  // No error will be thrown but on printing it old object will get printed.
+    const user = {id: 1, name: {firstname: "harshit", lastname: "raj"}, address: {city: "dhanbad", state: "jharkhand"}};
+    Object.freeze(user);
+    user.id = 2; // not allowed
+    user.name.lastname = 'sinha'; // allowed
+/* The way to overcome this is to make a custom function that will deep freeze the object.*/
+    function deepFreeze(user){
+        Object.keys(user).forEach(key => {
+            const keys_value = user[key];
+            if(keys_value && typeof keys_value === 'object'){
+                deepFreeze(keys_value);
+            }
+        });
+        return Object.freeze(user);
+    }
+    
+    const user = {id: 8, name: {firstname: "harshit", lastname: "raj"}, address: {city: "dhanbad", state: "jharkhand"}};
+    deepFreeze(user);
+    user.name.lastname = 'sinha';
+    user.address.city = 'ranchi';
+    console.log(user);
+
+/* Logic: in order to freeze any object, we pass the variable to the freeze() in which the object is stored. Function will take the primary object and then loop through each of its keys and store the value in a variable and check whether it is of type 'object' or not. If it is of type object it will recurse that nested object to check if there is 3rd level of object. If not found, it will return the nested object by freezing it => the nested object will be freezed and returned to the recursive function and then the loop will iterate to the next key. In this way all the key's value will be freezed if it is an object or even if it contains any nested object. */
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
