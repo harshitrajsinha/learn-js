@@ -189,3 +189,32 @@ console.table([testObj, newTestObj]);
 /* Logic: in order to freeze any object, we pass the variable to the freeze() in which the object is stored. Function will take the primary object and then loop through each of its keys and store the value in a variable and check whether it is of type 'object' or not. If it is of type object it will recurse that nested object to check if there is 3rd level of object. If not found, it will return the nested object by freezing it => the nested object will be freezed and returned to the recursive function and then the loop will iterate to the next key. In this way all the key's value will be freezed if it is an object or even if it contains any nested object. */
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Loose equality check( == ) vs Strict equality check ( === ):
+
+/*
+Loose equality check - JavaScript performs type coersion (change operands on LHS and RHS to same datatype) and then checks whether values are same, if datatypes are same.
+Strict equality check - The '===' operator checks for both value and type equality. Unlike ==, it does not perform type coercion. This means that the two values must be of the same type and have the same value to be considered equal.
+*/
+
+console.log(true == ' '); 
+// output: false => since loose equality operator is used, JS will first change both to same type i.e. numbers, true will be converted to 1 and ' ' will be converted to 0 because even though white-space is considered as a truty value in conditional statements, while converting to number, the string is trimmed making it to an empty string without any space and then changing it to number will return 0.
+// NOTE: Converting a non-empty string to number like 'harshit' will return NaN, if it contains non-numeric characters otherwise '1' will be converted to 1. Hence console.log(true == 'harshit'); will return false.
+
+console.log(true === ' '); 
+// output: false => since strict equality operator is used, JS will first check their types: boolean != string.
+
+/***********/
+
+// Trick question --
+let a = 10;
+let b = new Number(10);
+console.log(a === b); // false, number != object
+
+let a = 10;
+let b = new Number(10);
+console.log(a == b); // true -> When comparing a primitive value (a) with an object (b) using ==, JavaScript attempts to convert the object to a primitive value.
+
+/***********/
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
