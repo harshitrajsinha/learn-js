@@ -24,7 +24,7 @@ console.log(myNum); // 3
 /* Use-case: */
 // 1) To evaluate expression in single line (not professional) */
     let x = 2;
-    x = (x++, x); // since there is not expression to be evaluated so x++ will increment the value of x by 1. The value of x in second operand will become 3.
+    x = (x++, x); // since there is no expression to be evaluated so x++ will increment the value of x by 1. The value of x in second operand will become 3.
     console.log(x); // 3 
 // 2) Multiple assignments
     const n = ((a=2), (b=3), (c=4));
