@@ -183,7 +183,7 @@ console.table([testObj, newTestObj]);
     deepFreeze(user);
     user.name.lastname = 'sinha';
     user.address.city = 'ranchi';
-    console.log(user);
+    console.log(user); // {"id": 8,"name": {"firstname": "harshit","lastname": "raj"},"address": {"city": "dhanbad","state": "jharkhand"}}
 
 /* Logic: in order to freeze any object, we pass the variable to the freeze() in which the object is stored. Function will take the primary object and then loop through each of its keys and store the value in a variable and check whether it is of type 'object' or not. If it is of type object it will recurse that nested object to check if there is 3rd level of object. If not found, it will return the nested object by freezing it => the nested object will be freezed and returned to the recursive function and then the loop will iterate to the next key. In this way all the key's value will be freezed if it is an object or even if it contains any nested object. */
 
