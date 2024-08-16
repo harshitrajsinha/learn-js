@@ -93,7 +93,6 @@ In deep copy,  a copy of the object, duplicate top-level properties and nested o
 NOTE - 
 1) Object can be duplicated using - spread operator [shallow copy], assign() [shallow copy], JSON.parse(JSON.stringify()) [deep copy], library like Lodash's _.cloneDeep [deep copy]
 2) When an object is assign to another variable using '=' operator then the reference of the original object is shared to the newly created variable. Hence, the original object can be changed using either of the variables. The modification affects the top-level properties as well as nested objects.
-3) Nested objects gets modified whether the duplicate object is created using shallow copy or deep copy because for nested objects, its reference is stored
 */
 
 // Shallow copy
