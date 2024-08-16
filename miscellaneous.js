@@ -87,7 +87,7 @@ console.log(sentence_two.includes(undefined)); // searches for "undefined"
 // Object - Shallow copy vs Deep copy:
 
 /* 
-In shallow copy, a copy of the object, duplicate top-level properties and reference nested objects, is created in heap memory and the reference of this newly created object in the memory is given to the new variable. Hence, any change by the new variable to the object affects the newly created object and not the original one, except the nested objects. This is 
+In shallow copy, a copy of the object, duplicate top-level properties and reference nested objects, is created in heap memory and the reference of this newly created object in the memory is given to the new variable. Hence, any change by the new variable to the object affects the newly created object and not the original one, except the nested objects.
 In deep copy,  a copy of the object, duplicate top-level properties and nested objects, is created in heap memory and the reference of this newly created object in the memory is given to the new variable. Hence, any change by the new variable to the object affects the newly created object and not the original one, including the nested objects.
 
 NOTE - 
