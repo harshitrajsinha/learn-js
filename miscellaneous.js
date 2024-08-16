@@ -158,7 +158,7 @@ console.table([testObj, newTestObj]);
 
 /* Const keyword is used to make any primitive data type immutable but it does not work completely on non-primitive data types like objects. When an object is made contstant, then we cannot reassign a new object to the variable in which it is stored but modification of its properties are possible - */
     const newObj = {id: 1, name: 'random'};
-    newObj = {new_id: 23, new_name: 'random'}; // not allowed, JS will throw error -  Assignment to constant variable.
+    newObj = {new_id: 23, new_name: 'random'}; // not allowed, JS will throw error TypeError -  Assignment to constant variable.
     newObj.id = 2; // allowed
 /* In order to make an object immutable, use freeze() provided by the Object class. But it does not work with nested objects */
     const newObj = {id: 1, name: 'random'};
