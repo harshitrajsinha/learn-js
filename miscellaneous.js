@@ -9,7 +9,7 @@ const to_binary = num.toString(2);
 const print_my_name = function(){   // this type of syntax for writing function is used when we want to give reference of the function to elsewhere
   console.log("harshit");
 }
-setTimeout(print_my_name, 2000);
+setTimeout(print_my_name, 2000); // execute print_my_name() after an interval of 2secs.
 // Note: Above we are giving reference of the function
 // setTimeout(print_my_name(), 2000);  :- this will execute the function immediately
 
