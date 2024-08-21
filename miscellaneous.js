@@ -6,7 +6,7 @@ const to_binary = num.toString(2);
 
 // setTimeout - used to execute a process after certain time interval
 
-const print_my_name = function(){   // this type of syntax for writing function is used when we want to give reference of the function to elsewhere
+const print_my_name = function(){   // this type of syntax for writing function is used when we want to give reference of the function to elsewhere or we want to export that function to another file and make the function call over there.
   console.log("harshit");
 }
 setTimeout(print_my_name, 2000); // execute print_my_name() after an interval of 2secs.
