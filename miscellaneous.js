@@ -68,7 +68,7 @@ The includes() method of Array determines whether an array includes a certain el
 
 // includes() of string converts the passed value to a string before searching.
 str.includes(undefined) // searches for "undefined"
-"something 3 something".includes(3) // true : include() method is applied on string => type conversion of 3 from type=Number to type=String
+"something 3 something".includes(3) // true : include() method is applied on string => type coersion of 3 from type=Number to type=String
 "something 3 something".includes("3") // true
 
 /***********/
