@@ -62,14 +62,14 @@ The includes() method of Array determines whether an array includes a certain el
 */
 
 // It accepts two params - char/elem to search for, position to start searching
-[1, 2, 3].includes(3, 3); // false
-["1", "2", "3"].includes(3); // false
-"something 3 something".includes(3) // true
-"something 3 something".includes("3") // true
+[1, 2, 3].includes(3, 3); // false : at position 3 => (0,1,2,3), the value in the array is undefined. Hence, false
+["1", "2", "3"].includes(3); // false : include() is applied on an array and the value to be searched is of type Number, which is not present in the array
+["1", "2", "3", 3].includes(3); // true
 
 // includes() of string converts the passed value to a string before searching.
 str.includes(undefined) // searches for "undefined"
-
+"something 3 something".includes(3) // true : include() method is applied on string => type conversion of 3 from type=Number to type=String
+"something 3 something".includes("3") // true
 
 /***********/
 
