@@ -192,8 +192,8 @@ console.table([testObj, newTestObj]);
 // Loose equality check( == ) vs Strict equality check ( === ):
 
 /*
-Loose equality check - JavaScript performs type coersion (change operands on LHS and RHS to same datatype) and then checks whether values are same, if datatypes are same.
-Strict equality check - The '===' operator checks for both value and type equality. Unlike ==, it does not perform type coercion. This means that the two values must be of the same type and have the same value to be considered equal.
+Loose equality check - The '===' operator checks for both value and type equality by first performing type coersion on operands (change operands on LHS and RHS to same datatype).
+Strict equality check - The '===' operator checks for both value and type equality without type coersion. This means that the two values must be of the same type and have the same value to be considered equal.
 */
 
 console.log(true == ' '); 
