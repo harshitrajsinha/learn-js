@@ -1,6 +1,7 @@
 # Defining JavaScript:
 * Synchronous : Execution takes place in a sequence, line-by-line.
 * Single-threaded : Executes one command at a time.
+* Dynamically-typed/Loosely-typed language: Datatype of variable is decided during runtime.
 * JavaScript also has mechanisms (like callbacks, promises, async/await, and event loops) to handle asynchronous operations, allowing the language to perform non-blocking tasks (e.g., making network requests) while still being single-threaded.
 
 # Execution context:
