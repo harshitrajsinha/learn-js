@@ -13,7 +13,7 @@
 ![Execution Context](https://raw.githubusercontent.com/harshitrajsinha/learn-js/main/Assets/Screenshot%202024-08-24%20084642.png)
 
 # Memory Allocation:
-* Variable - JS allocates memory to a variable equal to the type of the value it is initialized with.
+* Variable - JS allocates memory to a variable equal to the type of the value it is initialized with. Initially, all the variables contains 'undefined' and once the code execution phase starts then the memory equal to the value starts getting allocated.
    
   let num = 10;          // 8 bytes for the number 10
   let str = "hello";     // 10 bytes for the 5 characters (each 2 bytes)
