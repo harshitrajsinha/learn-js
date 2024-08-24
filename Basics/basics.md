@@ -7,7 +7,15 @@
 * Container/environment in which JavaScript code is evaluated and executed
 * Types - 1) Global Execution Context - When the JS script runs, the global execution context is created; the 'this' keyword refers to the global object (e.g., window in browsers, global in Node.js). Only one global execution context exists in a JavaScript program. 2) Function Execution Context - Whenever a function is invoked, a new execution context is created for that function. Each function call has its own execution context, independent of other functions.
 * Components/parts - 1) Memory component/variable environment - Lists out all the variables in key-value pair. 2) Code component/ Thread of execution - Place where execution of code takes place.
+* Phase - 1) Creation phase - Memory is allocated to variables and functions
 * See Example (1).
   
 ![Execution Context](https://raw.githubusercontent.com/harshitrajsinha/learn-js/main/Assets/Screenshot%202024-08-24%20084642.png)
 
+# Memory Allocation:
+* Variable - JS allocates memory to a variable equal to the type of the value it is initialized with. If the variable is declared but not initialized then 'undefined' is stored as value and some fixed amount of memory is reserved for that variable. This fixed amount of memory varies depending upon the JS engine.
+  let num = 10;          // 8 bytes for the number 10
+  let str = "hello";     // 10 bytes for the 5 characters (each 2 bytes)
+  let flag = true;       // 1 byte for the boolean value true
+  let obj = { a: 1 };    // Reference to an object, memory depends on properties
+* Function - Function is stored as an object in memory which includes the space for its code, its internal properties (like name, length), and a reference to its prototype.
