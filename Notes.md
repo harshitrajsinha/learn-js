@@ -1,12 +1,15 @@
-To Master: Strings and its methods, Arrays and its methods, Objects, browser events, scope - Node vs Window/browser, this
+To Master: Strings and its methods, Arrays and its methods, Objects, Browser events, scope - Node vs Window/browser, this keyword
 
 --------------------------------------------------
 
-* A lot of browsers does not understand new and fancy syntax of JS like classes,  arrow functions. Solution => bring a tool in-between (modern JS) and browser that can convert modern JS into regular JS or browser-based JS, JS that browser understands
+* A lot of browsers do not understand new and fancy syntax of JS like - classes,  arrow functions. Solution => Introduce a tool in-between that can convert modern JS into classical JS or browser-based JS.
 
-* These tools are - Babel, Webpack (used by Bun)
+* These tools are - Babel, Webpack
 
 * Modern JS code -> bundled -> transpiled -> compiled. This can be done using languages such as C, Go, Rust, Zig (used by Bun)
+
+* Babel is a traspiler, which is a process of converting source code written in one programming language into another language that has a similar level of abstraction, which transpiles (converts) modern JavaScript into a version compatible with older browsers (e.g., converting ES6 arrow functions into ES5 functions).
+* Webpack is a module bundler (like parcel, rollup) that converts/bundles multiple JS files into a single large file that browser then uses to load the JS application. It resolves the problem of multiple files and their dependency on eachother as well as the loading of modules in different files in a specific order.
 
 * Bun use JavaScript Core (used by Safari web browser) as a runtime engine instead of popular V8 or spider monkey 
 
