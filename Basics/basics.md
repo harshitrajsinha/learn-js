@@ -1,6 +1,7 @@
 # Defining JavaScript:
-* Synchronous : Execution takes place in a specific order.
+* Synchronous : Execution takes place in a sequence, line-by-line.
 * Single-threaded : Executes one command at a time.
+* JavaScript also has mechanisms (like callbacks, promises, async/await, and event loops) to handle asynchronous operations, allowing the language to perform non-blocking tasks (e.g., making network requests) while still being single-threaded.
 
 # Execution context:
 * Container/environment in which JavaScript code is evaluated and executed
