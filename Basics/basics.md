@@ -13,9 +13,11 @@
 ![Execution Context](https://raw.githubusercontent.com/harshitrajsinha/learn-js/main/Assets/Screenshot%202024-08-24%20084642.png)
 
 # Memory Allocation:
-* Variable - JS allocates memory to a variable equal to the type of the value it is initialized with. If the variable is declared but not initialized then 'undefined' is stored as value and some fixed amount of memory is reserved for that variable. This fixed amount of memory varies depending upon the JS engine.
+* Variable - JS allocates memory to a variable equal to the type of the value it is initialized with.
+   
   let num = 10;          // 8 bytes for the number 10
   let str = "hello";     // 10 bytes for the 5 characters (each 2 bytes)
   let flag = true;       // 1 byte for the boolean value true
   let obj = { a: 1 };    // Reference to an object, memory depends on properties
+* If the variable is declared but not initialized then 'undefined' is stored as value and some fixed amount of memory is reserved for that variable. This fixed amount of memory varies depending upon the JS engine.
 * Function - Function is stored as an object in memory which includes the space for its code, its internal properties (like name, length), and a reference to its prototype.
