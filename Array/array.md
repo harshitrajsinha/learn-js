@@ -1,0 +1,9 @@
+# Map
+* map method in javascript is used to create a new array where each element of the new array will be tranformed values of the original array by performing some operations.
+* The original array remains intact.
+* map method in javascript accepts a callback function and applies the operation on each element of the array.
+* the callback function could have three parameters [value (each element of array), index (index of the elements of array), and the array itself]
+* map method in javascript acts like forEach but it returns data which is an array. forEach does not return any value. 
+* Since map returns an array we can do chaining with the help of map
+* It accepts a callback function, hence we can pass a complete function as well, this function will be called as callback function. That function will internally take the iterated array
+* map method is used for array transformation such as doubling the values of array, cubing the values of array etc.
