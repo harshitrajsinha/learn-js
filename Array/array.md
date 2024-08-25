@@ -1,7 +1,7 @@
 # Slice vs Splice
 * Slice creates a **shallow copy** of a portion of original array by taking into account the start and end index (end is excluded). If 2nd index is not mentioned then all elements are included till the end of array. Negative index can also be given as input, in which the count starts from the back of array.
-* Splice modifies the original array by taking out the portion of the array it is requested. splice() can also be used to **insert elements into array**.
-* See example (1)
+* Splice modifies the original array by taking out the portion of the array it is requested. splice() can also be used to **insert elements into array**. End index is included in case of splice.
+* See example: slice vs splice
 
 # Map
 * map method in javascript is used to create a new array where each element of the new array will be tranformed values of the original array by performing some operations.
@@ -12,3 +12,4 @@
 * Since map returns an array we can do chaining with the help of map
 * It accepts a callback function, hence we can pass a complete function as well, this function will be called as callback function. That function will internally take the iterated array
 * map method is used for array transformation such as doubling the values of array, cubing the values of array etc.
+* See example: map()
