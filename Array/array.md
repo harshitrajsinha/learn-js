@@ -1,3 +1,9 @@
+# Definition
+* Collection of elements with same or different data-types.
+* Resizable, mutable
+* If the length of array in JS is larger than the number of elements present in them, such array contains empty slots and has value as 'undefined'
+  `const myArr = [1,2]; myArr.length = 5; console.log(myArr); console.log(myArr[3]);`
+
 # Slice vs Splice
 * Slice creates a **shallow copy** of a portion of original array by taking into account the start and end index (end is excluded). If 2nd index is not mentioned then all elements are included till the end of array. Negative index can also be given as input, in which the count starts from the back of array.
 * Splice modifies the original array by taking out the portion of the array it is requested. splice() can also be used to **insert elements into array**. End index is included in case of splice.
