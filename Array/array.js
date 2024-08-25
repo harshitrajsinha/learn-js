@@ -11,14 +11,12 @@ console.log(mySpliceArr);  // [ 11, 12, 13 ]
 // Map()
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 // Testing parameters of callback function
 myNums.map((elem, index, thisArray) => {
   console.log(elem);                    // result: 1 -> 2 ... -> 10
   console.log("index", index);          // result: 0 -> 1 -> 2 ... -> 9
   console.log("thisArray", thisArray); // result: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] (print 10 times)
 })
-
 // forEach()  
 const newNums = myNums.forEach( (nums) => {
   return (nums + 1);
@@ -35,7 +33,6 @@ console.log(newMapNums); // result: [2, 3, 4,  5,  6, 7, 8, 9, 10, 11]
 // ## NOTE: even though it seems that we are returning each element, but instead each element is pushed to the array and the final array is returned
 
 // Chaining using map
-
 const newChainedMap = myNums
 .map((nums) => {
   return (nums + 1);   // [2, 3, 4,  5,  6, 7, 8, 9, 10, 11]
@@ -47,9 +44,7 @@ const newChainedMap = myNums
   return (nums > 50);
 })
 console.log(newChainedMap); // result: [60, 70, 80, 90, 100, 110]
-
 // Passing function to map()
-
 const cubes = myNums.map(findCube);
 console.log(cubes)
 function findCube(elements){
