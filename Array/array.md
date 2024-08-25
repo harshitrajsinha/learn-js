@@ -4,6 +4,12 @@
 * Increasing length of array adds empty slots and has value as 'undefined' and decreasing the length deletes the array element from end that does not fit into the length. The empty slots are ignored by forEach() but not by for loop
   `const myArr = [1,2]; myArr.length = 5; console.log(myArr); console.log(myArr[3]);`
 
+# Array methods
+* Some array methods mutate the original array. However, we can use alternative non-mutable methods -
+  
+ ![mutable vs non-mutable array methods](https://github.com/harshitrajsinha/learn-js/blob/main/Assets/Screenshot%202024-08-25%20092701.png?raw=true)
+
+ * To avoid mutability of array methods, one alternative is to create a copy of the original array using slice() or spread operator and then apply methods on them.
 
 # Slice vs Splice
 * Slice creates a **shallow copy** of a portion of original array by taking into account the start and end index (end is excluded). If 2nd index is not mentioned then all elements are included till the end of array. Negative index can also be given as input, in which the count starts from the back of array.
