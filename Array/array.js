@@ -1,3 +1,10 @@
+// Array methods -
+
+/* Array.from() */
+const images = document.querySelectorAll("img");
+const sources = Array.from(images, (image) => image.src); // returns an array containing the src/url of the images.
+
+
 // Slice vs Splice
 
 const myNumArr = [10, 11, 12, 13, 14];
