@@ -1,7 +1,7 @@
 # Definition
 * Collection of elements with same or different data-types.
 * Resizable, mutable
-* Increasing length of array adds empty slots and has value as 'undefined' and decreasing the length deletes the array element from end that does not fit into the length
+* Increasing length of array adds empty slots and has value as 'undefined' and decreasing the length deletes the array element from end that does not fit into the length. The empty slots are ignored by forEach() but not by for loop
   `const myArr = [1,2]; myArr.length = 5; console.log(myArr); console.log(myArr[3]);`
 
 
