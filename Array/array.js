@@ -1,3 +1,13 @@
+// Slice vs Splice
+
+const myNumArr = [10, 11, 12, 13, 14];
+const mySliceArr = myNumArr.slice(1,3);
+console.log(myNumArr);    // [ 10, 11, 12, 13, 14 ]
+console.log(mySliceArr);  // [ 11, 12 ]
+const mySpliceArr = myNumArr.splice(1,3);
+console.log(myNumArr);    // [ 10, 14 ]
+console.log(mySpliceArr);  // [ 11, 12, 13 ]
+
 // Map()
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
