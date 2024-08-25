@@ -10,6 +10,8 @@
  ![mutable vs non-mutable array methods](https://github.com/harshitrajsinha/learn-js/blob/main/Assets/Screenshot%202024-08-25%20092701.png?raw=true)
 
  * To avoid mutability of array methods, one alternative is to create a copy of the original array using slice() or spread operator and then apply methods on them.
+ * Some important array methods -
+   1. Array.from() - Used to create an array from iterable input; takes two params - 1) iterable input to be converted to array (if non-iterable like 2 or true, then [] is returned) and 2) optional callback function to perform any operation on each element of the array.
 
 # Slice vs Splice
 * Slice creates a **shallow copy** of a portion of original array by taking into account the start and end index (end is excluded). If 2nd index is not mentioned then all elements are included till the end of array. Negative index can also be given as input, in which the count starts from the back of array.
