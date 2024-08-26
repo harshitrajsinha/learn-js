@@ -5,3 +5,9 @@
   
 # Singleton
 * Object created using constructor can be singleton, not through literal declaraion.
+
+
+# HC notes:
+* object accessing - dot notation, square bracket (if typeof(key) === 'string' => accessing using bracket only)
+* symbol as key value - declare a symbol -> use as key using square bracket -> access using square bracket
+* 
