@@ -10,4 +10,6 @@
 # HC notes:
 * object accessing - dot notation, square bracket (if typeof(key) === 'string' => accessing using bracket only)
 * symbol as key value - declare a symbol -> use as key using square bracket -> access using square bracket
-* 
+* functions in object + this inside function to refer properties
+* optional chaining in object
+* hasOwnProperty()
