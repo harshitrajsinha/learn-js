@@ -1,6 +1,7 @@
 # Definition
 * Generic definition - Set of instructions that take certain arguments as input, process them and return an output.
-* Arguments are passed to the function by value => any change in the value of the parameters inside function scope will not affect the arguments passed. However, this is not true in case of objects and arrays since the parameters are going to reference the same objects and arrays. `See example-1`
+* Arguments are passed to the function by value => any change in the value of the parameters inside function scope will not affect the arguments passed. However, this is not true in case of objects and arrays since the parameters are going to reference the same objects and arrays. `See example-1`.
+* Function declarations are hoisted i.e. function can be called before the function definition is written.
 * **Methods** - Function used as property of an object.
 
 # Types of function
@@ -9,15 +10,20 @@
 3. Anonymous function
 
 # Function Expression
-* Use-case: Functions in JavaScript are high-order functions => function can be passed as an argument to other functions and function can also be returned from other functions. However, if we pass a function definition as an argument, it will make the code clumsy. So, a better approach would be to give a reference of that function to a variable and then (1) pass that variable as an argument. Another use case could be to (2) export the function to other files
-* See Function Expression example in `functions-miscellaneous.js`
+* Use-case: Functions in JavaScript are high-order functions => function can be passed as an argument to other functions (called callback fn) and function can also be returned from other functions. However, if we pass a function definition as an argument, it will make the code clumsy. So, a better approach would be to give a reference of that function to a variable and then (1) pass that variable as an argument. Another use case could be to (2) export the function to other files.
+* Function expressions are not hoisted. Program will throw 'ReferenceError' - Cannot access [variable_name holding ref to the function] before initialization
+* See Function Expression example in `functions-miscellaneous.js`.
+
+# Callback function
+* Functions passed as an argument to other function, generally they are anonymous function.
 
 # Topics covered
 * Function definition
 * Arguments as call by value and call by reference
 * Types of function
 * Function expression and its use-case
-* IIFE (Immediately Invoked Function Expression)
+* IIFE (Immediately Invoked Function Expression) ?
+* Callback functions
 
 ### HC code
 * Hoisting in case of expression
