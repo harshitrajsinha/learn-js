@@ -17,6 +17,10 @@
 # Callback function
 * Functions passed as an argument to other function, generally they are anonymous function.
 
+# Closure
+* In a nested function, inner function forms a closure => the inner function can use the arguments and variables of the outer function, while the outer function cannot use the arguments and variables of the inner function. Since the inner function forms a closure, outer function can be called and arguments can be specified for both the outer and inner function
+
+
 # Topics covered
 * Function definition
 * Arguments as call by value and call by reference
@@ -24,7 +28,9 @@
 * Function expression and its use-case
 * IIFE (Immediately Invoked Function Expression) ?
 * Callback functions
-
+* Closure ?
+* Scope chaining ?
+* Currying ?
 ### HC code
 * Hoisting in case of expression
 * rest operator and return type of rest operator
