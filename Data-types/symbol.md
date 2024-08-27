@@ -1,8 +1,9 @@
 # Definition
 * The 'description' of a Symbol is purely for debugging purposes and does not affect the uniqueness of the Symbol.
-* Symbols are immutable => When a symbol is created in memory, it becomes unique. A 'let' variable when assigned Symbol('1') from Symbol('2'), the variable is pointed from one symbol to another, but the first symbol and its uniqueness remains as it is.
+* Symbols are immutable => When a symbol is created in memory, it becomes unique. A 'let' variable when assigned Symbol('1') from Symbol('2'), the variable is pointed from one symbol to another, but the first symbol and its uniqueness remains as it is. `See exmaple -1`
 * "value" of symbol is its unique identity, but not something that can be accessed.
-* `See exmaple -1`
+* Although Symbols are stored in heap memory, they are still treated as primitives in JavaScript. This means they are passed by value, not by reference. `See example-2`
+
 
 
 # Points to ponder
