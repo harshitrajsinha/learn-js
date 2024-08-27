@@ -1,6 +1,6 @@
 # Definition
 * Generic definition - Set of instructions that take certain arguments as input, process them and return an output.
-* Arguments are passed to the function by value => any change in the value of the parameters inside function scope will not affect the arguments passed. However, this is not true in case of objects and arrays since the parameters are going to reference the same objects and arrays. [See example-1]
+* Arguments are passed to the function by value => any change in the value of the parameters inside function scope will not affect the arguments passed. However, this is not true in case of objects and arrays since the parameters are going to reference the same objects and arrays. `See example-1`
 * **Methods** - Function used as property of an object.
 
 # Types of function
