@@ -12,6 +12,12 @@
 * Use-case: Functions in JavaScript are high-order functions => function can be passed as an argument to other functions and function can also be returned from other functions. However, if we pass a function definition as an argument, it will make the code clumsy. So, a better approach would be to give a reference of that function to a variable and then (1) pass that variable as an argument. Another use case could be to (2) export the function to other files
 * See Function Expression example in `functions-miscellaneous.js`
 
+# Topics covered
+* Function definition
+* Arguments as call by value and call by reference
+* Types of function
+* Function expression and its use-case
+* IIFE (Immediately Invoked Function Expression)
 
 ### HC code
 * Hoisting in case of expression
