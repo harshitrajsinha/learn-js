@@ -23,3 +23,7 @@
   let obj = { a: 1 };    // Reference to an object, memory depends on properties
 * If the variable is declared but not initialized then 'undefined' is stored as value and some fixed amount of memory is reserved for that variable. This fixed amount of memory varies depending upon the JS engine.
 * Function - Function is stored as an object in memory which includes the space for its code, its internal properties (like name, length), and a reference to its prototype.
+
+# Control Flow:
+## Switch -
+* break keyword is important because once a key/case is matched then all the following gets executed => if the case 3 is matched then the code in case 4, case 5...will execute as well, except **default** case. Hence, using break is important in each switch case.
