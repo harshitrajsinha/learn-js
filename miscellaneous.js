@@ -221,3 +221,23 @@ console.log(a == b); // true -> When comparing a primitive value (a) with an obj
 // NaN is the only value in JavaScript that is not equal to itself.
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Falsy values in javascript - false, 0, -0, 0n (bigint), "", null, undefined, NaN
+const emptyArr = [];
+if(emptyArr){
+  // program will reaach here, because [] is truty value
+}else{
+  // program will not come here;
+}
+const emptyObj = {};
+if(emptyObj){
+  // program will reaach here, because [] is truty value
+}else{
+  // program will not come here;
+}
+const emptyFun = function(){};
+if(emptyFun){
+  // program will reaach here, because [] is truty value
+}else{
+  // program will not come here;
+}
