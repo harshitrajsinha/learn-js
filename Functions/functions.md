@@ -31,6 +31,7 @@
 * Closure ?
 * Scope chaining ?
 * Currying ?
+* Pure and impure function ?
 ### HC code
 * Hoisting in case of expression
 * rest operator and return type of rest operator
