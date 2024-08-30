@@ -262,4 +262,9 @@ innerHTML all the content inside the tag, including visible + hidden texts + all
 * parent to last child - Selector.lastElementChild;
 * child to parent - Selector.parentElement;
 * child1 to child2 - Selector.nextElementSibling;
+* Selector.replaceWith;
+* Selector.outerHTML;
+* Selector.remove;
 * Selector.childNodes ?
+# Edit and remove elements in DOM (video): optimization in DOM
+# CSS selectors ("li:nth-child(2)")
