@@ -241,3 +241,9 @@ if(emptyFun){
 }else{
   // program will not come here;
 }
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+console.log(window); -> document
+console.log(document);
+console.dir(document);
