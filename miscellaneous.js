@@ -268,3 +268,7 @@ innerHTML all the content inside the tag, including visible + hidden texts + all
 * Selector.childNodes ?
 # Edit and remove elements in DOM (video): optimization in DOM
 # CSS selectors ("li:nth-child(2)")
+// if a parent with class 'harshit' has input tag or button tag the to select it - 
+document.querySelector('.harshit button')
+document.querySelector('.harshit input')
+
