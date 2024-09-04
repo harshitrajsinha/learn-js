@@ -28,3 +28,37 @@ innerHTML all the content inside the tag, including visible + hidden texts + all
 document.querySelector('.harshit button')
 document.querySelector('.harshit input')
 ```
+
+# Use of event:
+
+```html
+  <body>
+    <div id="parent"> 
+      <button id="btn-1">1st Button</button> 
+      <button id="btn-2">2nd Button</button> 
+      <button id="btn-3">3rd Button</button> 
+      <button id="btn-4">4th Button</button> 
+      <button id="btn-5">5th Button</button> 
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+          
+          const parent_div = document.getElementById('parent');
+          
+          // Method-1
+          const button_list = parent_div.querySelectorAll('button');
+          button_list.forEach((button) => {
+            button.addEventListener('click', function(){
+              console.log(button);
+            })
+          })
+
+          // Method-2: Better
+          parent_div.addEventListener('click', function(e){
+            console.log(e.target);
+          })
+          
+        })
+    </script>
+  </body>
+```
