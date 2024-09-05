@@ -77,15 +77,15 @@ document.querySelector('.harshit input')
 
 # innerText vs innerHTML vs textContent ?
 
-1. innerHTML
+## innerHTML
 * Returns HTML markup and text content of element.
 * Can pose security risk as it can read and run any script passed to it. For example, if user passes any script inside input field and innerHTML is used in the backend for any manipulation purpose for that element then browser will render that script as well.
-2. innerText
+## innerText
 * Returns (only) text content of element that is rendered on screen
-3. textContent
+## textContent
 * Returns (only) text content of the element present in the markup
-4. innerText vs textContent
+## innerText vs textContent
 * innerText returns text that is rendered on the screen whereas textContent returns text that is present in the markup, that is, innerText will not return the text that is hidden using CSS style but textContent will.
 * innerText accounts for line-break and formatting but textContent ignores it, that is, in case of paragraph, innerText will return the paragraph in a formatted way (considering <br> and whitespaces) but textContent will return the content in same line.
-#outerHTML
+> outerHTML
 * Returns same as innerHTML + parent tag on which the functionality is applied.
