@@ -3,7 +3,12 @@
 * Resizable, mutable
 * type - object
 * Increasing length of array adds empty slots and has value as 'undefined' and decreasing the length deletes the array element from end that does not fit into the length. The empty slots are ignored by forEach() but not by for loop
-  `const myArr = [1,2]; myArr.length = 5; console.log(myArr); console.log(myArr[3]);`
+```javascript
+const myArr = [1,2];
+myArr.length = 5;
+console.log(myArr);
+console.log(myArr[3]);
+```
 
 # Array methods
 * Some important array methods -
@@ -17,7 +22,15 @@
 # Slice vs Splice
 * Slice creates a **shallow copy** of a portion of original array by taking into account the start and end index (end is excluded). If 2nd index is not mentioned then all elements are included till the end of array. Negative index can also be given as input, in which the count starts from the back of array.
 * Splice modifies the original array by taking out the portion of the array it is requested. splice() can also be used to **insert elements into array**. End index is included in case of splice.
-* See example: slice vs splice
+```javascript
+const myNumArr = [10, 11, 12, 13, 14];
+const mySliceArr = myNumArr.slice(1,3);
+console.log(myNumArr);    // [ 10, 11, 12, 13, 14 ]
+console.log(mySliceArr);  // [ 11, 12 ]
+const mySpliceArr = myNumArr.splice(1,3);
+console.log(myNumArr);    // [ 10, 14 ]
+console.log(mySpliceArr);  // [ 11, 12, 13 ]
+```
 
 # Map
 * map method in javascript is used to create a new array where each element of the new array will be tranformed values of the original array by performing some operations.
@@ -28,7 +41,50 @@
 * Since map returns an array we can do chaining with the help of map
 * It accepts a callback function, hence we can pass a complete function as well, this function will be called as callback function. That function will internally take the iterated array
 * map method is used for array transformation such as doubling the values of array, cubing the values of array etc.
-* See example: map()
+```javascript
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Testing parameters of callback function
+myNums.map((elem, index, thisArray) => {
+  console.log(elem);                    // result: 1 -> 2 ... -> 10
+  console.log("index", index);          // result: 0 -> 1 -> 2 ... -> 9
+  console.log("thisArray", thisArray); // result: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] (print 10 times)
+})
+// forEach()  
+const newNums = myNums.forEach( (nums) => {
+  return (nums + 1);
+})
+console.log(newNums);   // result: undefined
+// The way to get through this is to declare a new array and then push the elements into that array within forEach loop
+
+// Map()
+const newMapNums = myNums.map( (nums) => {
+  return (nums + 1);
+})
+console.log(newMapNums); // result: [2, 3, 4,  5,  6, 7, 8, 9, 10, 11]
+
+// some() ?
+// ## NOTE: even though it seems that we are returning each element, but instead each element is pushed to the array and the final array is returned
+```
+```javascript
+// Chaining using map
+const newChainedMap = myNums
+.map((nums) => {
+  return (nums + 1);   // [2, 3, 4,  5,  6, 7, 8, 9, 10, 11]
+})
+.map((nums) => {
+  return (nums * 10);   // [20, 30, 40,  50,  60, 70, 80, 90, 100, 110]
+})
+.filter((nums) => {
+  return (nums > 50);
+})
+console.log(newChainedMap); // result: [60, 70, 80, 90, 100, 110]
+// Passing function to map()
+const cubes = myNums.map(findCube);
+console.log(cubes)
+function findCube(elements){
+  return Math.pow(elements, 3);
+}
+```
 
 # Copying array
 * Reference copy - Variable storing the array is assigned to another variable => both variables hold the reference to same array and modifying the array using any of the two will modify the original array (both top-level and nested properties/elements).
