@@ -19,7 +19,7 @@ console.log(myArr[3]);
 
  * To avoid mutability of array methods, one alternative is to create a copy of the original array using slice() or spread operator and then apply methods on them.
 
-# Slice vs Splice
+# Slice [[STL]](https://github.com/harshitrajsinha/learn-js/blob/b6bba150739e76730e61229f862991ce4ff9d9bf/STL/Arrays/slice.ts) vs Splice
 * Slice creates a **shallow copy** of a portion of original array by taking into account the start and end index (end is excluded). If 2nd index is not mentioned then all elements are included till the end of array. Negative index can also be given as input, in which the count starts from the back of array.
 * Splice creates a new array by taking out / removing the portion of the array from the original array it is requested. Hence original array also gets modified. splice() can also be used to **insert elements into array**. End index is included in case of splice.
 ```javascript
