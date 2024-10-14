@@ -10,11 +10,10 @@ class Solution{
         }
         // Return if start index is not defined
         if(typeof start === 'undefined'){
-            console.log("Start index is required");
-            return [];
+            return arr;
         }
         // Return if start index is greater than or equal to array length
-        if(start >= arr.length){
+        if(start >= arr.length){ // slice(originalArr)
             return [];
         }
 
