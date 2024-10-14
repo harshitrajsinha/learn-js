@@ -29,3 +29,18 @@
 * It accepts a callback function, hence we can pass a complete function as well, this function will be called as callback function. That function will internally take the iterated array
 * map method is used for array transformation such as doubling the values of array, cubing the values of array etc.
 * See example: map()
+
+# Copying array
+* Reference copy - Variable storing the array is assigned to another variable => both variables hold the reference to same array and modifying the array using any of the two will modify the original array (both top-level and nested properties/elements).
+```javascript
+const arr = [1, 2, 3];
+const newArr = arr;
+```
+* Shallow copy - Copy of the original variable is created in which the properties/elements and their orders are same. Top-level elements are duplicated whereas reference is created for nested elements. => Modifying top-level properties/elements through new array will not affect the original but modifying the nested elements will affect the original as well. Ways to create -> Array.from(), Array.slice()
+```javascript
+const arr = [1,2,3];
+const newArr = Array.from(arr);
+
+const str = 'harshit';
+const strArr = Array.from(str);
+```
