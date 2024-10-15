@@ -102,4 +102,5 @@ const strArr = Array.from(str);
 ```
 
 # Updating array
+* push(), unshift(), pop(), shift()
 [Reference](https://github.com/harshitrajsinha/learn-js/blob/main/Array/updating-array.md)
