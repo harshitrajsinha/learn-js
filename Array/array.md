@@ -100,3 +100,5 @@ const newArr = Array.from(arr);
 const str = 'harshit';
 const strArr = Array.from(str);
 ```
+
+# Modifying
