@@ -101,4 +101,5 @@ const str = 'harshit';
 const strArr = Array.from(str);
 ```
 
-# Modifying
+# Updating array
+![Reference](https://github.com/harshitrajsinha/learn-js/blob/main/Array/updating-array.md)
