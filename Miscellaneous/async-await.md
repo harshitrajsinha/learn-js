@@ -82,4 +82,5 @@ console.log(test()); // promise <'1'>
 
 # References:
 [.then().catch vs async/await](https://www.youtube.com/watch?v=li7FzDHYZpc)
+
 [Why does JavaScript's fetch make me wait TWICE?](https://youtu.be/Ki64Cnyf_cA?si=WH_mUGn8sy3QsBTh)
