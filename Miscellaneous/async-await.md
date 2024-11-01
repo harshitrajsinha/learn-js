@@ -1,8 +1,8 @@
 ```javascript
 async syncCall(){
   console.log("Inside");
-  const response = await fetch("https://api.github.com/users/harshitrajsinha");
-  const result = await response.json();
+  const resp = await fetch("https://api.github.com/users/harshitrajsinha"); // returns promise and then response = headers and body stream in resp variable
+  const result = await resp.json(); // returns promise and then response in JSON format
   console.log(result);
 }
 console.log("Before");
@@ -79,3 +79,7 @@ async function test(){
 console.log(test()); // promise <'1'>
 ```
 * await - keyword is used to make the function synchronous.
+
+# References:
+[.then().catch vs async/await](https://www.youtube.com/watch?v=li7FzDHYZpc)
+[Why does JavaScript's fetch make me wait TWICE?](https://youtu.be/Ki64Cnyf_cA?si=WH_mUGn8sy3QsBTh)
