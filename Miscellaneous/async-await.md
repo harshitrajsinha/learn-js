@@ -80,6 +80,54 @@ console.log(test()); // promise <'1'>
 ```
 * await - keyword is used to make the function synchronous.
 
+# Simulating api creation to return promise, then response
+```javascript
+function mockFetch(url) {
+    return new Promise((resolve, reject) => {
+
+        // Simulate network latency with a delay of 2 seconds
+        setTimeout(() => {
+            if (url === "https://example.com/api/data") {
+                // Simulated response data
+                const data = {
+                    message: "Data fetched successfully!",
+                    timestamp: new Date().toISOString()
+                };
+
+                // Resolve the promise with a Response-like object
+                resolve({
+                    ok: true,
+                    status: 200,
+                    json: () => Promise.resolve(data)
+                });
+            } else {
+                // If the URL is not correct, reject the promise
+                reject(new Error("404: Not Found"));
+            }
+        }, 2000); // 2-second delay
+    });
+}
+
+// const responsePromise = mockFetch("https://example.com/api/data");
+// console.log(responsePromise);  // Promise { <pending> }
+
+// Usage with async/await
+(async () => {
+    try {
+        const response = await mockFetch("https://example.com/api/data");
+        console.log(response);
+        if (response.ok) {
+            const data = await response.json();
+            console.log("Response received:", data);
+        } else {
+            console.error("Failed to fetch data.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+    }
+})();
+```
+
 # References:
 [.then().catch vs async/await](https://www.youtube.com/watch?v=li7FzDHYZpc)
 
