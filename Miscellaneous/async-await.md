@@ -79,7 +79,7 @@ async function test(){
 console.log(test()); // promise <'1'>
 ```
 * await - keyword is used to make the function synchronous.
-* Promise is returned in multiple scenarios - Fetching data from API, working with databases, authentication and authorization, websockets, reading and writing files.
+* Promise (an object) is returned in multiple scenarios - Fetching data from API, working with databases, authentication and authorization, websockets, reading and writing files.
 
 # Simulating api creation to return promise, then response
 ```javascript
