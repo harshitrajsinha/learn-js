@@ -136,13 +136,20 @@ function mockFetch(url) {
 }
 
 const responsePromise = mockFetch("https://example.com/api/data");
-console.log(responsePromise);
+console.log(responsePromise); // Promise { <pending> }
 responsePromise
-    .then((value) => {
-        return value.json();
+    .then((response) => {
+        console.log(response); // { ok: true, status: 200, json: [Function: json] }
+        return response.json();
     })
     .then((data) => {
-        console.log(data);
+        console.log(data); 
+        /*
+            {
+                message: 'Data fetched successfully!',
+                timestamp: '2024-11-02T12:20:28.561Z'
+            }
+        */
     })
     .catch((error) => {
         console.log(error)
