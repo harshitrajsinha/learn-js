@@ -100,6 +100,9 @@ function mockFetch(url) {
                     ok: true,
                     status: 200,
                     json: () => Promise.resolve(data)
+                    /*
+                      In the real fetch API, calling .json() on the response object returns a promise that resolves to parsed JSON data. To mimic this behavior, json: () => Promise.resolve(data) is used to simulate the .json() method.
+                    */
                 });
             } else {
                 // If the URL is not correct, reject the promise
