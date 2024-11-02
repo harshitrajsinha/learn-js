@@ -112,32 +112,6 @@ function mockFetch(url) {
     });
 }
 
-function mockFetch(url) {
-    return new Promise((resolve, reject) => {
-
-        // Simulate network latency with a delay of 2 seconds
-        setTimeout(() => {
-            if (url === "https://example.com/api/data") {
-                // Simulated response data
-                const data = {
-                    message: "Data fetched successfully!",
-                    timestamp: new Date().toISOString()
-                };
-
-                // Resolve the promise with a Response-like object
-                resolve({
-                    ok: true,
-                    status: 200,
-                    json: () => Promise.resolve(data)
-                });
-            } else {
-                // If the URL is not correct, reject the promise
-                reject(new Error("404: Not Found"));
-            }
-        }, 2000); // 2-second delay
-    });
-}
-
 const responsePromise = mockFetch("https://example.com/api/data");
 console.log(responsePromise); // Promise { <pending> }
 responsePromise
