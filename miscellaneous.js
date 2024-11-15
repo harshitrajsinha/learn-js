@@ -87,8 +87,8 @@ console.log(sentence_two.includes(undefined)); // searches for "undefined"
 // Object - Shallow copy vs Deep copy:
 
 /* 
-In shallow copy, a copy of the object, duplicate top-level properties and reference of nested objects (objects, arrays) and top-level objects (objects, arrays) , is created in heap memory and the reference of this newly created object in the memory is given to the new variable. Hence, any change by the new variable to the object affects the newly created object and not the original one, except the nested objects and also top-level objects (objects, arrays).
-In deep copy,  a copy of the object, duplicate top-level properties and nested objects, is created in heap memory and the reference of this newly created object in the memory is given to the new variable. Hence, any change by the new variable to the object affects the newly created object and not the original one, including the nested objects.
+In shallow copy, a copy of the object, duplicate top-level properties and reference of nested objects (objects, arrays) and top-level objects (objects, arrays) , is created in heap memory and the reference of this newly created object in the memory is given to the new variable => Primitive data-types are copied by value and non-primitive data-types are copied by reference. Hence, any change by the new variable to the object affects the newly created object and not the original one, except the nested objects and also top-level objects (objects, arrays).
+In deep copy,  a copy of the object, duplicate top-level properties and nested objects, is created in heap memory and the reference of this newly created object in the memory is given to the new variable => Primitive data-types and non-primitive data-types are copied by value. Hence, any change by the new variable to the object affects the newly created object and not the original one, including the nested objects.
 
 NOTE - 
 1) Object can be duplicated using - spread operator [shallow copy], assign() [shallow copy], JSON.parse(JSON.stringify()) [deep copy], library like Lodash's _.cloneDeep [deep copy]
