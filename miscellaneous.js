@@ -87,7 +87,7 @@ console.log(sentence_two.includes(undefined)); // searches for "undefined"
 // Object - Shallow copy vs Deep copy:
 
 /* 
-In shallow copy, a copy of the object, duplicate top-level properties and reference nested objects, is created in heap memory and the reference of this newly created object in the memory is given to the new variable. Hence, any change by the new variable to the object affects the newly created object and not the original one, except the nested objects.
+In shallow copy, a copy of the object, duplicate top-level properties and reference of nested objects (objects, arrays) and top-level objects (objects, arrays) , is created in heap memory and the reference of this newly created object in the memory is given to the new variable. Hence, any change by the new variable to the object affects the newly created object and not the original one, except the nested objects and also top-level objects (objects, arrays).
 In deep copy,  a copy of the object, duplicate top-level properties and nested objects, is created in heap memory and the reference of this newly created object in the memory is given to the new variable. Hence, any change by the new variable to the object affects the newly created object and not the original one, including the nested objects.
 
 NOTE - 
@@ -113,6 +113,21 @@ console.table([testObj, newTestObj]);
 │ 0       │ 1  │ { firstName: 'Harshit', lastName: 'Sinha' } │
 │ 1       │ 2  │ { firstName: 'Harshit', lastName: 'Sinha' } │
 └─────────┴────┴─────────────────────────────────────────────┘
+
+const obj = {
+  1: 'a',
+  2: ['b', 'd', 'e'],
+  3: { a: '1', b: '2' },
+};
+
+const newObj = {
+  ...obj,
+  4: 'f',
+};
+
+newObj['1'] = 'A'; // does not affect original
+newObj['2'][1] = 'D'; // affects original
+newObj['3']['a'] = '11'; // affects original
 
 // Deep copy -
 const testObj = {
