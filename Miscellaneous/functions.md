@@ -1,4 +1,4 @@
-# Difference between calling a function and referencing a function
+# Calling vs Referencing
 ```javascript
 const returnNum = () => {
   return 23;
