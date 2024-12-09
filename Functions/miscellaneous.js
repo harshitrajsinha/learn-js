@@ -13,3 +13,14 @@ const print_name = function(){
 console.log(typeof print_name()); // output: harshit -> Number
 console.log(typeof print_name);  // output: function object
 
+// Function object
+
+//In JavaScript, functions are first-class objects, meaning they can have properties just like any other object
+function abc() {
+  console.log(abc.xyz);
+}
+abc();         // console -> undefined
+abc.xyz = 400; // 400 will be assigned to 'xyz' property of function abc
+abc.xyz = 200; // 200 will be assigned to 'xyz' property of function abc
+abc();         // console -> 200
+
