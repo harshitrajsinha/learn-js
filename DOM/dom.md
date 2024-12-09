@@ -71,8 +71,10 @@ document.querySelector('.harshit input')
 * Use .createDocumentFragment property to group multiple updates before inserting them into the document.
 
 # Event propagation
-* By default an event is propagated from bottom to up
-* If a parent and child both have an event listener attached to it. Triggering event listener of parent will only act on the parent, but child's event listener will trigger first child and then parent as well (bottom -> up).
+* Describes the flow of event through the DOM heirarchy.
+* Event flows from root of DOM (document) to the target and then back to root.
+* It has three phases - Capturing phase (enabled by turning 'capture' option to true in event listener) in which event is propagated from top to bottom, Target phase and Bubbling phase in which event is propagated from bottom to top.
+* If a parent and child both have an event listener attached to it. Triggering event listener of parent will only act on the parent, but child's event listener will trigger first child and then parent as well (default: bottom -> up i.e. bubbling).
 * This can lead to issues if parent triggering is not intended. To avoid this use `event.stopPropagation()`
 
 # innerText vs innerHTML vs textContent ?
