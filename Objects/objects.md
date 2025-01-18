@@ -13,6 +13,7 @@ console.log(`nullProtoObj is: ${nullProtoObj}`); // throws error: Cannot convert
 
 // Prototypes can be added manually.
 nullProtoObj.toString = Object.prototype.toString;
+Object.setPrototypeOf(nullProtoObj, Object.prototype)
 ```
 
 # Methods:
