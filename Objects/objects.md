@@ -22,6 +22,9 @@ nullProtoObj.toString = Object.prototype.toString;
 ## Static Methods:
 `defineProperty()`, `getOwnPropertyDescriptor()`, `hasOwn()`
 
-# To check if property exists in an object:
-use - `hasOwn()` - this overcomes the limitations of `hasOwnProperty()` but does not include inherited properties like `toString()` and `valueOf()` \
-use - `in` - this checks for direct and inherited properties as well.
+# How to check if property exists in an object:
+* `hasOwn()` - this overcomes the limitations of 'hasOwnProperty()' but does not include inherited properties like 'toString()' and 'valueOf()'. Use `hasOwnProperty()` for browsers that dont support 'hasOwn()' \
+* `in` - this checks for direct and inherited properties as well.
+
+# How to delete property from an object:
+* use `delete` operator
