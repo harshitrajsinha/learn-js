@@ -14,5 +14,5 @@
   let sayH = 'harshitraj';
 ```
 * This happens because -
-* In lexical environment, as the script starts execution, all the variables and functions are already registered in 'environment record' even before program reaches their declaration statement. A variable is in <uninitialized> state untill program reaches line no - 14, as a result we get referece error on accessing it before declaring it. However, a function is initialized completely even before program reaches line no - 11.
+* In lexical environment, as the script starts execution, all the variables and functions are already registered in 'environment record' even before program reaches their declaration statement. A variable is in < uninitialized > state untill program reaches line no - 14, as a result we get referece error on accessing it before declaring it. However, a function is initialized completely even before program reaches line no - 11.
 [Reference](https://javascript.info/closure#lexical-environment)
