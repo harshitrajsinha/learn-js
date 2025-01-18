@@ -13,3 +13,15 @@ console.log(`nullProtoObj is: ${nullProtoObj}`); // throws error: Cannot convert
 // Prototypes can be added manually.
 nullProtoObj.toString = Object.prototype.toString;
 ```
+
+# Methods:
+
+## Instance Methods:
+* Methods defined in the 'Object' class - `valueOf()`, `toString()`, `hasOwnProperty()`
+
+## Static Methods:
+`defineProperty()`, `getOwnPropertyDescriptor()`, `hasOwn()`
+
+# To check if property exists in an object:
+use - `hasOwn()` - this overcomes the limitations of `hasOwnProperty()` but does not include inherited properties like `toString()` and `valueOf()` \
+use - `in` - this checks for direct and inherited properties as well.
