@@ -16,13 +16,13 @@ nullProtoObj.toString = Object.prototype.toString;
 Object.setPrototypeOf(nullProtoObj, Object.prototype)
 ```
 
-# Methods:
+# Should know methods:
 
 ## Instance Methods:
 * Methods defined in the 'Object' class - `valueOf()`, `toString()`, `hasOwnProperty()`
 
 ## Static Methods:
-`defineProperty()`, `getOwnPropertyDescriptor()`, `hasOwn()`
+`defineProperty()`, `freeze()`, `hasOwn()`, `keys()`, `getOwnPropertyNames()`, `values()`, `entries()`, `groubBy()`, `is()`
 
 # How to check if property exists in an object:
 * `hasOwn()` - this overcomes the limitations of 'hasOwnProperty()' but does not include inherited properties like 'toString()' and 'valueOf()'. Use `hasOwnProperty()` for browsers that dont support 'hasOwn()' \
