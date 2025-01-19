@@ -36,3 +36,6 @@ Object.setPrototypeOf(nullProtoObj, Object.prototype)
 1. `=` operator -> reference original object (changing anything to new obj will affect original obj)
 2. `assign()`, `...` -> top-level properties duplicated but nested objects are referenced (changing top-level prop to new obj will not affect original obj but nested objects affect original obj).
 3. `JSON.parse(JSON.stringify())`, `_.cloneDeep()`, `structuredClone()` -> everything is duplicated (changing anything to new obj will not affect original obj)
+
+# How to merge multiple objects:
+* use `assign()`, `...` 
