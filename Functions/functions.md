@@ -37,8 +37,9 @@ const arrow = () => {
 NOTE: typeof this = object
 
 # Arguments object
-* functions have a built-in object - 'Arguments' contains each parameters stored as a value against indices as key.
+* functions have a built-in array-like object => data is stored as key-value pair like object where keys are indices like array.
 * It can be used to know the length of total arguemts and if we are passing 10 arguments but only one params is accepting, arguments will show all 10.
+* Arrow functions do not have their own arguments variable. They take the context of "surrounding lexical scope" 
 ```javascript
 function showMessage(val) {
   console.log(arguments);  // { '0': 1, '1': 2, '2': 3, '3': 4, '4': 5 }
