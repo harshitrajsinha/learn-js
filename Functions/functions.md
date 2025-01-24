@@ -20,6 +20,21 @@
 # Closure
 * In a nested function, inner function forms a closure => the inner function can use the arguments and variables of the outer function, while the outer function cannot use the arguments and variables of the inner function. Since the inner function forms a closure, outer function can be called and arguments can be specified for both the outer and inner function
 
+# this
+* 'this' keyword contains the current context - which contains bunch of methods (like Array.prototype or Object.prototype contains toString()) that we can call inside a function like setTimeout(), setInterval(), structuredClone(), fetch().
+* Arrow functions do not have their own context. They take the context of "surrounding lexical scope" => if arrow function is defined in global scope, then {} will be value of 'this' whereas if it is defined inside another function declaration, then its context will be of that one.
+```javascript
+function showMessage() {
+  const arrow = () => {
+    console.log(this) // contains: setTimeout(), setInterval() ...
+  }
+}
+
+const arrow = () => {
+  console.log(this) // {}
+}
+```
+NOTE: typeof this = object
 
 # Topics covered
 * Function definition
