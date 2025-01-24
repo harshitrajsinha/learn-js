@@ -24,3 +24,17 @@ abc.xyz = 400; // 400 will be assigned to 'xyz' property of function abc
 abc.xyz = 200; // 200 will be assigned to 'xyz' property of function abc
 abc();         // console -> 200
 
+// What can we do to make variable visible outside of if?
+// The correct approach would be to use a Function Expression.
+let age = prompt("What is your age?", 18);
+let welcome;
+if (age < 18) {
+  welcome = function() {
+    alert("Hello!");
+  };
+} else {
+  welcome = function() {
+    alert("Greetings!");
+  };
+}
+welcome(); // ok now
