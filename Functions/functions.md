@@ -35,6 +35,7 @@ const arrow = () => {
 }
 ```
 NOTE: typeof this = object
+NOTE: current context (value of this) is different for function declaration and function inside an object
 
 # Arguments object
 * functions have a built-in array-like object => data is stored as key-value pair like object where keys are indices like array and has length property.
